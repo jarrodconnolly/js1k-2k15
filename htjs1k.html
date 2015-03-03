@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    <style>
+      #c { display: block; }
+			body,html,iframe{margin:0;padding:0;border:0;width:100%;height:100%}
+    </style>
+	</head>
+	<body>
+		<canvas id="c" style="width:100%;height:100%"></canvas>
+		<script>
+			var a = document.getElementsByTagName('canvas')[0];
+			var b = document.body;
+			var iwin = window;
+      iwin.requestAnimationFrame = iwin.requestAnimationFrame || iwin.mozRequestAnimationFrame || iwin.webkitRequestAnimationFrame || iwin.msRequestAnimationFrame || function(f){ iwin.setTimeout(f, 1000/30); };
+      var c = a.getContext('2d');
+			a.height = innerHeight;
+			a.width = innerWidth;
+		</script>
+		<script src="mytunnel2.js">
+		</script>
+	</body>
+</html>
